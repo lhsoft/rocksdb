@@ -67,6 +67,8 @@ class CacheDumpReader {
 // dump or load process related control variables can be added here.
 struct CacheDumpOptions {
   SystemClock* clock;
+  // dump all keys without filter
+  bool dump_all_keys = false;
 };
 
 // NOTE that: this class is EXPERIMENTAL! May be changed in the future!

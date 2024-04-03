@@ -140,7 +140,7 @@ CacheDumperImpl::DumpOneBlockCallBack(std::string& buf) {
     }
 
     // based on the key prefix, check if the block should be filter out.
-    if (ShouldFilterOut(key)) {
+    if (!options_.dump_all_keys && ShouldFilterOut(key)) {
       return;
     }
 
